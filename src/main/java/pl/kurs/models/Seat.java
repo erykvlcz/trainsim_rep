@@ -4,7 +4,11 @@ import java.util.Objects;
 
 public class Seat {
     private int number;
-    private boolean isOccupied;
+    private boolean isOccupied = false;
+
+    public Seat(int number) {
+        this.number = number;
+    }
 
     public int getNumber() {
         return number;
