@@ -12,6 +12,8 @@ public class Train {
     private String name;
     private List<Seat> seatList = new ArrayList<>();
 
+
+
     private Train(String name, List<Seat> seatList) {
         this.name = name;
         this.seatList = seatList;
@@ -21,7 +23,7 @@ public class Train {
         if(passengerSeatsNumber < 1) throw new TrainConfigProblem("Ilość miejsc pasażerów nie może być mniejsza od 1");
         return new Train(
                 name,
-                IntStream.rangeClosed(0, passengerSeatsNumber).mapToObj(Seat::new).toList()
+                IntStream.rangeClosed(0, passengerSeatsNumber - 1).mapToObj(Seat::new).toList()
         );
     }
 
