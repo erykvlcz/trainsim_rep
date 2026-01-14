@@ -22,8 +22,6 @@ public class TSRunner {
             e.printStackTrace();
         }
 
-        trainService.cancelSeatReservation(10);
-        trainService.cancelSeatReservation(10);
 
     }
 }
